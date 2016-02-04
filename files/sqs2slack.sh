@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# AWS configuration
 SQS_URL="<sqs url>"
 REGION="<region>"
 
+# slack configuration
 SLACK_CHANNEL="<channel name>"
 SLACK_USERNAME="CloudWatchAlarmBot"
 SLACK_ICON="<icon_name>"
 SLACK_WEBHOOK_URL="<slack webhook url>"
+
+# project configuration
+PROJECT="<project name>"
 
 warn(){
   echo $1 >&2
@@ -47,7 +52,7 @@ data=`cat << EOF
         "fields": [
           {
             "title": "Project",
-            "value": "sample",
+            "value": "$PROJECT",
             "short": true
           },
           {
