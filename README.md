@@ -16,6 +16,12 @@
 ansible-galaxy install -r requirements.yml -p roles
 ```
 
+### set config
+- files/sqs2slack.sh
+    - please revise <value> point.
+- hosts
+    - please revise server ip.
+
 ### provisioning
 
 ```
