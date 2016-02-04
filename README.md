@@ -19,12 +19,12 @@ ansible-galaxy install -r requirements.yml -p roles
 ## set config
 ### files/sqs2slack.sh
 - please revise <value> point.
-    - <sqs url>
-    - <region>
-    - <channel name>
-    - <icon_name>
-    - <slack webhook url>
-    - <project name>
+    - `<sqs url>`
+    - `<region>`
+    - `<channel name>`
+    - `<icon_name>`
+    - `<slack webhook url>`
+    - `<project name>`
 
 ### hosts
 - please revise server ip.
