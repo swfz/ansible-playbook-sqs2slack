@@ -1,0 +1,9 @@
+- name: create directory
+  file: "path=/var/deploy state=directory owner={{ sqs2slack.user }} group=root mode=0755"
+
+- name: set file
+  copy: src=sqs2slack.sh dest=/var/deploy/sqs2slack.sh mode=755
+
+- name: set config file
+  template: src=sqs2slack.ini dest=/etc/supervisor.d/sqs2slack.ini
+  notify: restart supervisord
